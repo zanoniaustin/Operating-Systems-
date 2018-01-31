@@ -11,6 +11,11 @@ int main(int argc, char *argv[])
 	if (child_pid == 0)
 	{
   		printf("child started\n");
+		j =0;
+		for (int i=0; i<100000000;i++)
+		{
+			j = i-3+j;
+		}
   		execl("/bin/nano", "nano", "testRunNano.txt", NULL);
   		printf("child ended\n");
   		return 3;
