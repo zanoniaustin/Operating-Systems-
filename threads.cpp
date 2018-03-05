@@ -10,11 +10,11 @@ int main()
 {
 	int counter = 0;
 	thread first(inc, counter);
-																																																																																																																														
-	cout << counter;
+	thread second(inc, counter);
+																																																																																																																						
+	cout << counter << endl;
 	first.join();
-																																																																																
-
+	second.join();
 	return 0;
 }
 
